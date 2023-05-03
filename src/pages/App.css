@@ -31,7 +31,16 @@ label {
   border-radius: 50%;
 }
 
-.logoimage{
-  width: 400px;
+.cooperimage{
+  width: 200px;
   height: auto;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.frankiesimage{
+  width: 500px;
+  height: auto;
+  display: inline-block;
+  vertical-align: top;
 }

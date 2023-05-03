@@ -71,14 +71,12 @@ class App extends Component<Props, State> {
     const { currentUser, showModeratorBoard, showAdminBoard } = this.state;
 
     return (
-      <div>
+       <div>
         <nav className="navbar navbar-expand navbar-dark bg-dark">
           <div className="navbar-nav mr-auto">
-            <li className="nav-item">
-              <Link to={"/home"} className="nav-link">
-                Home
-              </Link>
-            </li>
+            <a href="/">
+                <img src = "images/transparentfrankies.png" alt = "home" className = "home-image"></img>
+            </a>
             {showModeratorBoard && (
               <li className="nav-item">
                 <Link to={"/mod"} className="nav-link">
@@ -117,7 +115,7 @@ class App extends Component<Props, State> {
                 </Link>
                 </li>
               <li className="nav-item">
-                <a href="/login" className="nav-link" onClick={this.logOut}>
+                <a href="/login" className="nav-link">
                   LogOut
                 </a>
               </li>
@@ -139,7 +137,7 @@ class App extends Component<Props, State> {
           )}
         </nav>
        <main>
-         {/*main component here*/}
+         
        </main>
         <div className="container mt-3">
           <Routes>

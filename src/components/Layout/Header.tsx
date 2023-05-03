@@ -25,7 +25,7 @@ const Header = (props: any) => {
         <nav>
           <ul>
             <li>
-              <button className = {classes.button + " "+classes["button-logout"]} >LOG OUT</button>
+                <button className={classes.button + " " + classes["button-logout"]}>LOG OUT</button>
             </li>
           </ul>
         </nav>

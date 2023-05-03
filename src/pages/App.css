@@ -44,3 +44,8 @@ label {
   display: inline-block;
   vertical-align: top;
 }
+
+.home-image{
+    width: 200px;
+    height: auto;
+}

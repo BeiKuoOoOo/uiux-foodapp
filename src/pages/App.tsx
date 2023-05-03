@@ -13,10 +13,11 @@ import Profile from "../components/Login/profile.component";
 import BoardUser from "../components/Login/board-user.component";
 import BoardModerator from "../components/Login/board-moderator.component";
 import BoardAdmin from "../components/Login/board-admin.component";
+import Menu from "../components/Login/menu.component";
 
 import EventBus from "../common/EventBus";
 import AvailableMeals from "../components/Meals/AvailableMeals";
-import Meals from "../components/Meals/Meals";
+
 
 
 type Props = {};
@@ -78,11 +79,6 @@ class App extends Component<Props, State> {
                 Home
               </Link>
             </li>
-            <li className="nav-item">
-              <Link to={"/food"} className="nav-link">
-                Food
-              </Link>
-              </li>
             {showModeratorBoard && (
               <li className="nav-item">
                 <Link to={"/mod"} className="nav-link">
@@ -115,6 +111,11 @@ class App extends Component<Props, State> {
                   {currentUser.username}
                 </Link>
               </li>
+              <li>
+              <Link to={"/menu"} className="menu">
+                  Menu
+                </Link>
+                </li>
               <li className="nav-item">
                 <a href="/login" className="nav-link" onClick={this.logOut}>
                   LogOut
@@ -138,7 +139,7 @@ class App extends Component<Props, State> {
           )}
         </nav>
        <main>
-        <Meals />
+         main component here
        </main>
         <div className="container mt-3">
           <Routes>
@@ -150,7 +151,7 @@ class App extends Component<Props, State> {
             <Route path="/user" element={<BoardUser />} />
             <Route path="/mod" element={<BoardModerator />} />
             <Route path="/admin" element={<BoardAdmin />} />
-            <Route path="/food" element={<AvailableMeals />} />
+            <Route path="/menu" element={<Menu />} />
           </Routes>
         </div>
 

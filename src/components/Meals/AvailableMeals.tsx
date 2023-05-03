@@ -112,43 +112,36 @@ const Snacks = [
     {
         id: "m1",
         name: "Snickers",
-        description: "Finest fish and veggies",
         price: 2,
     },
     {
         id: "m2",
         name: "Milano",
-        description: "A german specialty!",
         price: 2,
     },
     {
         id: "m3",
         name: "Granola Bars",
-        description: "American, raw, meaty",
         price: 2,
     },
     {
         id: "m4",
         name: "Skittles",
-        description: "Healthy...and green...",
         price: 2,
     },
     {
         id: "m5",
         name: "Lay's Chips",
-        description: "Healthy...and green...",
         price: 2,
     },
     {
         id: "m6",
         name: "Doritos",
-        description: "Healthy...and green...",
         price: 2,
     },
     {
         id: "m7",
         name: "Cheetos",
-        description: "Healthy...and green...",
         price: 2,
     },
 ];
@@ -157,49 +150,41 @@ const Drinks = [
     {
         id: "m1",
         name: "Poland Springs",
-        description: "Finest fish and veggies",
         price: 1,
     },
     {
         id: "m2",
         name: "Coke",
-        description: "A german specialty!",
         price: 2,
     },
     {
         id: "m3",
         name: "Diet Coke",
-        description: "American, raw, meaty",
         price: 2,
     },
     {
         id: "m4",
         name: "Sprite",
-        description: "Healthy...and green...",
         price: 2,
     },
     {
         id: "m5",
         name: "Pepsi",
-        description: "Healthy...and green...",
         price: 2,
     },
     {
         id: "m6",
         name: "Super Coffee",
-        description: "Healthy...and green...",
         price: 4,
     },
     {
         id: "m7",
         name: "Orange Juice",
-        description: "Healthy...and green...",
         price: 3,
     },
     {
         id: "m8",
         name: "Apple Juice",
-        description: "Healthy...and green...",
         price: 3,
     },
 

@@ -139,7 +139,11 @@ class App extends Component<Props, State> {
           )}
         </nav>
        <main>
-         main component here
+         <div className = "container">
+            <img src = "/images/cooperlogo.jpg" alt = "Cooper Logo" className = "logoimage"/>
+            <h1>Frankie's!</h1>
+            <p>Welcome to Frankie's website! You can now order your food and pay online. Save your time by ordering ahead!</p>
+          </div>
        </main>
         <div className="container mt-3">
           <Routes>

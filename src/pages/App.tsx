@@ -95,13 +95,13 @@ class App extends Component<Props, State> {
               </li>
             )}
 
-            {currentUser && (
-              <li className="nav-item">
-                <Link to={"/user"} className="nav-link">
-                  User
-                </Link>
-              </li>
-            )}
+            {/*{currentUser && (*/}
+            {/*  // <li className="nav-item">*/}
+            {/*  //   <Link to={"/user"} className="nav-link">*/}
+            {/*  //     User*/}
+            {/*  //   </Link>*/}
+            {/*  // </li>*/}
+            {/*)}*/}
           </div>
 
           {currentUser ? (
@@ -139,11 +139,7 @@ class App extends Component<Props, State> {
           )}
         </nav>
        <main>
-         <div className = "container">
-            <img src = "/images/cooperlogo.jpg" alt = "Cooper Logo" className = "logoimage"/>
-            <h1>Frankie's!</h1>
-            <p>Welcome to Frankie's website! You can now order your food and pay online. Save your time by ordering ahead!</p>
-          </div>
+         {/*main component here*/}
        </main>
         <div className="container mt-3">
           <Routes>
@@ -152,7 +148,7 @@ class App extends Component<Props, State> {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/profile" element={<Profile />} />
-            <Route path="/user" element={<BoardUser />} />
+            {/*<Route path="/user" element={<BoardUser />} />*/}
             <Route path="/mod" element={<BoardModerator />} />
             <Route path="/admin" element={<BoardAdmin />} />
             <Route path="/menu" element={<Menu />} />

@@ -17,11 +17,15 @@ const Header = (props: any) => {
         <nav>
           <ul>
             <li>
-              <Link to ="/menu" className = {classes.button}>MENU</Link>
+                <Link to="/menu"> <button className={classes.button}>MENU</button></Link>
+              
             </li>
           </ul>
         </nav>
         <HeaderCartButton onClick={props.onShowCart} />
+                  <a href="/">
+                      <img src="/images/proficon.jpg" alt="profile" className={classes.profileicon} />
+                  </a>
         <nav>
           <ul>
             <li>

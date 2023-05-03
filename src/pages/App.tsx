@@ -18,6 +18,8 @@ import Menu from "../components/Login/menu.component";
 import EventBus from "../common/EventBus";
 import AvailableMeals from "../components/Meals/AvailableMeals";
 
+import Header from "../components/Layout/Header";
+
 
 
 type Props = {};
@@ -71,12 +73,10 @@ class App extends Component<Props, State> {
     const { currentUser, showModeratorBoard, showAdminBoard } = this.state;
 
     return (
-       <div>
+        <div>
+        
         <nav className="navbar navbar-expand navbar-dark bg-dark">
           <div className="navbar-nav mr-auto">
-            <a href="/">
-                <img src = "images/transparentfrankies.png" alt = "home" className = "home-image"></img>
-            </a>
             {showModeratorBoard && (
               <li className="nav-item">
                 <Link to={"/mod"} className="nav-link">
@@ -137,7 +137,11 @@ class App extends Component<Props, State> {
           )}
         </nav>
        <main>
-         
+                <Header />
+                <div style={{ paddingTop: '100px' }}>
+                    <h1>Welcome to Frankies!</h1>
+                    <p>You can now order your food online. Save time by ordering ahead!</p>
+         </div>
        </main>
         <div className="container mt-3">
           <Routes>

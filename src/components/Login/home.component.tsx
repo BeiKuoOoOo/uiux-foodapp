@@ -21,7 +21,7 @@ export default class Home extends Component<Props, State> {
     UserService.getPublicContent().then(
       response => {
         this.setState({
-          content: response.data
+          content: ""
         });
       },
       error => {

@@ -20,8 +20,6 @@ import AvailableMeals from "../components/Meals/AvailableMeals";
 
 import Header from "../components/Layout/Header";
 
-
-
 type Props = {};
 
 type State = {
@@ -73,10 +71,14 @@ class App extends Component<Props, State> {
     const { currentUser, showModeratorBoard, showAdminBoard } = this.state;
 
     return (
-        <div>
-        
+      <div className = "homepage">
         <nav className="navbar navbar-expand navbar-dark bg-dark">
           <div className="navbar-nav mr-auto">
+            <li className="nav-item">
+              <a href = "/">
+                <img src="images/transparentfrankies.png" alt = "Home" style={{height: '100px', width: 'Auto'}}/>
+                </a>
+            </li>
             {showModeratorBoard && (
               <li className="nav-item">
                 <Link to={"/mod"} className="nav-link">
@@ -104,18 +106,19 @@ class App extends Component<Props, State> {
 
           {currentUser ? (
             <div className="navbar-nav ml-auto">
-              <li className="nav-item">
+              <Header />
+              {/* <li className="nav-item">
                 <Link to={"/profile"} className="nav-link">
                   {currentUser.username}
                 </Link>
-              </li>
+              </li> */}
               <li>
               <Link to={"/menu"} className="menu">
                   Menu
                 </Link>
                 </li>
               <li className="nav-item">
-                <a href="/login" className="nav-link">
+                <a href="/login" className="nav-link" onClick={this.logOut}>
                   LogOut
                 </a>
               </li>
@@ -136,12 +139,11 @@ class App extends Component<Props, State> {
             </div>
           )}
         </nav>
-       <main>
-                <Header />
-                <div style={{ paddingTop: '100px' }}>
-                    <h1>Welcome to Frankies!</h1>
-                    <p>You can now order your food online. Save time by ordering ahead!</p>
-         </div>
+       <main className = "homepage">
+            <h1>
+              Welcome to Frankie's Kitchen!
+            </h1>
+
        </main>
         <div className="container mt-3">
           <Routes>

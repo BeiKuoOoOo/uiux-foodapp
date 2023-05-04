@@ -88,3 +88,13 @@ nav {
     height: 50px;
     width: auto;
 }
+
+.profile-dropdown{
+  position: relative;
+}
+
+.dropdown-content{
+  position: absolute;
+  top: 100%;
+  left: 0;
+}

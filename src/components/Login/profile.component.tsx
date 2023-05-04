@@ -42,9 +42,16 @@ export default class Profile extends Component<Props, State> {
           <div>
             <header className="jumbotron">
               <h3>
-                <strong>{currentUser.username}</strong> Profile
+                <strong>Profile</strong>
               </h3>
             </header>
+            <p>
+              <strong> Username:</strong> {currentUser.username}
+            </p>
+            <p>
+              <strong>Email:</strong>{" "}
+              {currentUser.email}
+            </p>
             <p>
               <strong>Token:</strong>{" "}
               {currentUser.accessToken.substring(0, 20)} ...{" "}
@@ -53,10 +60,6 @@ export default class Profile extends Component<Props, State> {
             <p>
               <strong>Id:</strong>{" "}
               {currentUser.id}
-            </p>
-            <p>
-              <strong>Email:</strong>{" "}
-              {currentUser.email}
             </p>
             <strong>Authorities:</strong>
             <ul>

@@ -190,7 +190,7 @@ const Drinks = [
 
 ];
 
-const AvailableMeals = () => {
+const AvailableDrinks = () => {
   const foodList = (
     <ul>
       {Food.map((meal) => (
@@ -221,12 +221,10 @@ const AvailableMeals = () => {
   );
   return (
     <div className={classes.container}>
-      <Card>{foodList}</Card>
-      <Card>{bakeryList}</Card>
+      
       <Card>{drinkList}</Card>
-      <Card>{snackList}</Card>
     </div>
   );
 };
 
-export default AvailableMeals;
+export default AvailableDrinks;

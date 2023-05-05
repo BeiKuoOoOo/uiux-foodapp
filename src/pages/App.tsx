@@ -75,7 +75,7 @@ class App extends Component<Props, State> {
     return (
       <div className = "homepage">
         <header className="navbar navbar-expand navbar-dark bg-dark">
-          <div className="navbar-nav">
+          <div className="navbar-nav" style = {{paddingLeft: '30px'}}>
               <a href = "/">
                 <img src="images/transparentfrankies.png" alt = "Home" style={{height: '100px', width: 'Auto'}}/>
                 </a>
@@ -107,14 +107,42 @@ class App extends Component<Props, State> {
               <ul>
                 <li>
                   <a href="#Menu">
-                    <Link to={"/menu"}>
+                    <Link to={"/menu"} className = "nav-button">
                       Menu
                     </Link>
                   </a>
                 </li>
                 <li>
-                  <a href="#Login" onClick={this.logOut}>
-                    LogOut
+                  <a href="#Bakery">
+                    <Link to={"/menu"} className = "nav-button">
+                      Bakery
+                    </Link>
+                  </a>
+                </li>
+                <li>
+                  <a href="#Drinks">
+                    <Link to={"/menu"} className = "nav-button">
+                      Drinks
+                    </Link>
+                  </a>
+                </li>
+                <li>
+                  <a href="#Snacks">
+                    <Link to={"/menu"} className = "nav-button">
+                      Snacks
+                    </Link>
+                  </a>
+                </li>
+                <li>
+                  <a href="#Login" onClick={this.logOut} className = "nav-button">
+                    Log Out
+                    </a>
+                </li>
+                <li>
+                  <a href="#Profile">
+                    <Link to={"/profile"} className = "nav-button">
+                      Profile
+                    </Link>
                   </a>
                 </li>
               </ul>
@@ -141,7 +169,7 @@ class App extends Component<Props, State> {
           )}
           </div>
         </header>
-       <main className = "homepage">
+       <main>
             <h1>
               Welcome to Frankie's Kitchen!
             </h1>

@@ -30,8 +30,8 @@ const Header = (props: any) => {
           {/*    </li>*/}
           {/*  </ul>*/}
           {/*</nav>*/}
-
-          <HeaderCartButton onClick={props.onShowCart} />
+          <HeaderCartButton onClick={props.onShowCart} style = {{paddingRight: '100px'}}/>
+          
 
           {/*<div className={classes["profile-dropdown"]} onMouseEnter={toggleDropdown} onMouseLeave={toggleDropdown}>*/}
           {/*  <a href="/">*/}

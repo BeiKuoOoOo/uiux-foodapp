@@ -52,7 +52,7 @@ label {
 
 .homepage{
   background-color: #ffddc2;
-  height: 500px;
+  height: fit-content;
   top:0;
   left: 10px;
 }
@@ -69,13 +69,26 @@ li {
 }
 
 li a {
-  display: block;
+  /* display: block; */
   color: white;
   text-align: center;
+  vertical-align: center;
   padding: 16px;
   text-decoration: none;
+  width: 150px;
+  line-height: 50px;
 }
 
 li a:hover {
   background-color: #cc7b5c;
+}
+
+.nav-button{
+  width: 100px;
+}
+
+html, body {
+  background-color: #ffddc2;
+  margin: 0;
+  padding: 0;
 }

@@ -39,12 +39,14 @@ export default class Profile extends Component<Props, State> {
     return (
       <div className="container">
         {(this.state.userReady) ?
-          <div>
+          <div className = "container">
+            
             <header className="jumbotron">
               <h3>
                 <strong>Profile</strong>
               </h3>
             </header>
+            <img src="../../../../images/proficon.jpg" alt="Profile Image" style={{width: "150px",borderRadius: "50%"}}/>
             <p>
               <strong> Username:</strong> {currentUser.username}
             </p>

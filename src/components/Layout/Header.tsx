@@ -19,33 +19,33 @@ const Header = (props: any) => {
       <Provider store={store}>
         <header className={classes.header}>
 
-          <a href="/">
-            <img src="/images/transparentfrankies.png" alt="Home" className={classes.logo} />
-          </a>
+          {/*<a href="/">*/}
+          {/*  <img src="/images/transparentfrankies.png" alt="Home" className={classes.logo} />*/}
+          {/*</a>*/}
 
-          <nav>
-            <ul>
-              <li>
-                <Link to="/menu"><button className={classes.button}>MENU</button></Link>
-              </li>
-            </ul>
-          </nav>
+          {/*<nav>*/}
+          {/*  <ul>*/}
+          {/*    <li>*/}
+          {/*      <Link to="/menu"><button className={classes.button}>MENU</button></Link>*/}
+          {/*    </li>*/}
+          {/*  </ul>*/}
+          {/*</nav>*/}
 
           <HeaderCartButton onClick={props.onShowCart} />
 
-          <div className={classes["profile-dropdown"]} onMouseEnter={toggleDropdown} onMouseLeave={toggleDropdown}>
-            <a href="/">
-              <img src="/images/proficon.jpg" alt="profile" className={classes.profileicon} />
-            </a>
-            {isDropdownOpen &&
-              <div className={classes["dropdown-content"]}>
-                <Link to = "/profile">
-                  <button className={classes.button}>Profile</button>
-                </Link>
-                <button className={classes.button + " " + classes["button-logout"]}>LOG OUT</button>
-              </div>
-            }
-          </div>
+          {/*<div className={classes["profile-dropdown"]} onMouseEnter={toggleDropdown} onMouseLeave={toggleDropdown}>*/}
+          {/*  <a href="/">*/}
+          {/*    <img src="/images/proficon.jpg" alt="profile" className={classes.profileicon} />*/}
+          {/*  </a>*/}
+          {/*  {isDropdownOpen &&*/}
+          {/*    <div className={classes["dropdown-content"]}>*/}
+          {/*      <Link to = "/profile">*/}
+          {/*        <button className={classes.button}>Profile</button>*/}
+          {/*      </Link>*/}
+          {/*      <button className={classes.button + " " + classes["button-logout"]}>LOG OUT</button>*/}
+          {/*    </div>*/}
+          {/*  }*/}
+          {/*</div>*/}
         </header>
         {/*<div className={classes["main-image"]}>
           <img src={mealsImage} alt="A table full of delicious food!" />

@@ -19,6 +19,8 @@ import EventBus from "../common/EventBus";
 import AvailableMeals from "../components/Meals/AvailableMeals";
 
 import Header from "../components/Layout/Header";
+import Cart from "../components/Cart/Cart";
+import Card from "../components/UI/Card";
 
 type Props = {};
 
@@ -72,28 +74,18 @@ class App extends Component<Props, State> {
 
     return (
       <div className = "homepage">
-        <nav className="navbar navbar-expand navbar-dark bg-dark">
-          <div className="navbar-nav mr-auto">
-            <li className="nav-item">
+        <header className="navbar navbar-expand navbar-dark bg-dark">
+          <div className="navbar-nav">
               <a href = "/">
                 <img src="images/transparentfrankies.png" alt = "Home" style={{height: '100px', width: 'Auto'}}/>
                 </a>
-            </li>
-            {showModeratorBoard && (
-              <li className="nav-item">
-                <Link to={"/mod"} className="nav-link">
-                  Moderator Board
-                </Link>
-              </li>
-            )}
-
-            {showAdminBoard && (
-              <li className="nav-item">
-                <Link to={"/admin"} className="nav-link">
-                  Admin Board
-                </Link>
-              </li>
-            )}
+            {/*{showModeratorBoard && (*/}
+            {/*  <li className="nav-item">*/}
+            {/*    <Link to={"/mod"} className="nav-link">*/}
+            {/*      Moderator Board*/}
+            {/*    </Link>*/}
+            {/*  </li>*/}
+            {/*)}*/}
 
             {/*{currentUser && (*/}
             {/*  // <li className="nav-item">*/}
@@ -103,42 +95,52 @@ class App extends Component<Props, State> {
             {/*  // </li>*/}
             {/*)}*/}
           </div>
-
-          {currentUser ? (
-            <div className="navbar-nav ml-auto">
               <Header />
+          <div>
+          {currentUser ? (
+            <div>
               {/* <li className="nav-item">
                 <Link to={"/profile"} className="nav-link">
                   {currentUser.username}
                 </Link>
               </li> */}
-              <li>
-              <Link to={"/menu"} className="menu">
-                  Menu
-                </Link>
+              <ul>
+                <li>
+                  <a href="#Menu">
+                    <Link to={"/menu"}>
+                      Menu
+                    </Link>
+                  </a>
                 </li>
-              <li className="nav-item">
-                <a href="/login" className="nav-link" onClick={this.logOut}>
-                  LogOut
-                </a>
-              </li>
+                <li>
+                  <a href="#Login" onClick={this.logOut}>
+                    LogOut
+                  </a>
+                </li>
+              </ul>
             </div>
           ) : (
-            <div className="navbar-nav ml-auto">
-              <li className="nav-item">
-                <Link to={"/login"} className="nav-link">
-                  Login
-                </Link>
-              </li>
-
-              <li className="nav-item">
-                <Link to={"/register"} className="nav-link">
-                  Sign Up
-                </Link>
-              </li>
+            <div>
+              <ul>
+                <li>
+                <a href="#Login">
+                  <Link to={"/login"}>
+                    Login
+                  </Link>
+                </a>
+                  </li>
+                <li>
+                <a href="#Sign Up">
+                  <Link to={"/register"}>
+                    Sign Up
+                  </Link>
+                </a>
+                </li>
+              </ul>
             </div>
           )}
-        </nav>
+          </div>
+        </header>
        <main className = "homepage">
             <h1>
               Welcome to Frankie's Kitchen!
@@ -157,10 +159,8 @@ class App extends Component<Props, State> {
             <Route path="/admin" element={<BoardAdmin />} />
             <Route path="/menu" element={<Menu />} />
           </Routes>
-          
         </div>
 
-        { /*<AuthVerify logOut={this.logOut}/> */}
       </div>
     );
   }

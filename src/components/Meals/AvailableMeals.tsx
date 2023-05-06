@@ -191,42 +191,42 @@ const Drinks = [
 ];
 
 const AvailableMeals = () => {
-  const foodList = (
-    <ul>
-      {Food.map((meal) => (
-        <MealItem key={meal.id} item={meal} />
-      ))}
-    </ul>
-  );
-  const bakeryList = (
-    <ul>
-      {Bakery.map((meal) => (
-        <MealItem key={meal.id} item={meal} />
-      ))}
-    </ul>
-  );
-  const drinkList = (
-    <ul>
-      {Drinks.map((meal) => (
-        <MealItem key={meal.id} item={meal} />
-      ))}
-    </ul>
-  );
-  const snackList = (
-    <ul>
-      {Snacks.map((meal) => (
-        <MealItem key={meal.id} item={meal} />
-      ))}
-    </ul>
-  );
-  return (
-    <div className={classes.container}>
-      <Card>{foodList}</Card>
-      <Card>{bakeryList}</Card>
-      <Card>{drinkList}</Card>
-      <Card>{snackList}</Card>
-    </div>
-  );
+    const foodList = (
+        <ul>
+            {Food.map((meal) => (
+                <MealItem key={meal.id} item={meal}/>
+            ))}
+        </ul>
+    );
+    const bakeryList = (
+        <ul>
+            {Bakery.map((meal) => (
+                <MealItem key={meal.id} item={meal}/>
+            ))}
+        </ul>
+    );
+    const drinkList = (
+        <ul>
+            {Drinks.map((meal) => (
+                <MealItem key={meal.id} item={meal}/>
+            ))}
+        </ul>
+    );
+    const snackList = (
+        <ul>
+            {Snacks.map((meal) => (
+                <MealItem key={meal.id} item={meal}/>
+            ))}
+        </ul>
+    );
+    return (
+        <div className={classes.container}>
+            <Card>{foodList}</Card>
+            <Card>{bakeryList}</Card>
+            <Card>{drinkList}</Card>
+            <Card>{snackList}</Card>
+        </div>
+    );
 };
 
 export default AvailableMeals;

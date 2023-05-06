@@ -47,18 +47,18 @@ const AvailableDrinks = [
 ];
 
 const DrinkList = () => {
-  const drinkList = (
-    <ul>
-      {AvailableDrinks.map((meal) => (
-        <MealItem key={meal.id} item={meal} />
-      ))}
-    </ul>
-  );
-  return (
-    <div className={classes.container}>
-      <Card>{drinkList}</Card>
-    </div>
-  );
+    const drinkList = (
+        <ul>
+            {AvailableDrinks.map((meal) => (
+                <MealItem key={meal.id} item={meal}/>
+            ))}
+        </ul>
+    );
+    return (
+        <div className={classes.container}>
+            <Card>{drinkList}</Card>
+        </div>
+    );
 };
 
 export default DrinkList;

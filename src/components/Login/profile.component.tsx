@@ -1,5 +1,5 @@
-import { Component } from "react";
-import { Navigate } from "react-router-dom";
+import {Component} from "react";
+import {Navigate} from "react-router-dom";
 import AuthService from "../../services/auth.service";
 import IUser from "../../types/user.type";
 import Meals from "../../components/Meals/Meals";
@@ -7,52 +7,52 @@ import Meals from "../../components/Meals/Meals";
 type Props = {};
 
 type State = {
-  redirect: string | null,
-  userReady: boolean,
-  currentUser: IUser & { accessToken: string }
+    redirect: string | null,
+    userReady: boolean,
+    currentUser: IUser & { accessToken: string }
 }
 export default class Profile extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
+    constructor(props: Props) {
+        super(props);
 
-    this.state = {
-      redirect: null,
-      userReady: false,
-      currentUser: { accessToken: "" }
-    };
-  }
-
-  componentDidMount() {
-    const currentUser = AuthService.getCurrentUser();
-
-    if (!currentUser) this.setState({ redirect: "/home" });
-    this.setState({ currentUser: currentUser, userReady: true })
-  }
-
-  render() {
-    if (this.state.redirect) {
-      return <Navigate to={this.state.redirect} />
+        this.state = {
+            redirect: null,
+            userReady: false,
+            currentUser: {accessToken: ""}
+        };
     }
 
-    const { currentUser } = this.state;
+    componentDidMount() {
+        const currentUser = AuthService.getCurrentUser();
 
-    return (
-      <div className="container">
-        {(this.state.userReady) ?
-          <div>
-            <header className="jumbotron">
-              <h3>
-                <strong>Profile</strong>
-              </h3>
-            </header>
-            <p>
-              <strong> Username:</strong> {currentUser.username}
-            </p>
-            <p>
-              <strong>Email:</strong>{" "}
-              {currentUser.email}
-            </p>
-            {/* <p>
+        if (!currentUser) this.setState({redirect: "/home"});
+        this.setState({currentUser: currentUser, userReady: true})
+    }
+
+    render() {
+        if (this.state.redirect) {
+            return <Navigate to={this.state.redirect}/>
+        }
+
+        const {currentUser} = this.state;
+
+        return (
+            <div className="container">
+                {(this.state.userReady) ?
+                    <div>
+                        <header className="jumbotron">
+                            <h3>
+                                <strong>Profile</strong>
+                            </h3>
+                        </header>
+                        <p>
+                            <strong> Username:</strong> {currentUser.username}
+                        </p>
+                        <p>
+                            <strong>Email:</strong>{" "}
+                            {currentUser.email}
+                        </p>
+                        {/* <p>
               <strong>Token:</strong>{" "}
               {currentUser.accessToken.substring(0, 20)} ...{" "}
               {currentUser.accessToken.substr(currentUser.accessToken.length - 20)}
@@ -61,13 +61,13 @@ export default class Profile extends Component<Props, State> {
               <strong>Id:</strong>{" "}
               {currentUser.id}
             </p> */}
-            {/* <strong>Authorities:</strong>
+                        {/* <strong>Authorities:</strong>
             <ul>
               {currentUser.roles &&
                 currentUser.roles.map((role, index) => <li key={index}>{role}</li>)}
             </ul> */}
-          </div> : null}
-      </div>
-    );
-  }
+                    </div> : null}
+            </div>
+        );
+    }
 }

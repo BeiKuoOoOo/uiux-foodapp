@@ -51,18 +51,18 @@ const AvailableBakery = [
     }
 ];
 const BakeryList = () => {
-  const bakeryList = (
-    <ul>
-      {AvailableBakery.map((meal) => (
-        <MealItem key={meal.id} item={meal} />
-      ))}
-    </ul>
-  );
-  return (
-    <div className={classes.container}>
-      <Card>{bakeryList}</Card>
-    </div>
-  );
+    const bakeryList = (
+        <ul>
+            {AvailableBakery.map((meal) => (
+                <MealItem key={meal.id} item={meal}/>
+            ))}
+        </ul>
+    );
+    return (
+        <div className={classes.container}>
+            <Card>{bakeryList}</Card>
+        </div>
+    );
 };
 
 export default BakeryList;

@@ -6,7 +6,7 @@ import {store} from "../../app/store";
 import {Provider} from "react-redux";
 import Header from "../Layout/Header"
 import Cart from "../Cart/Cart"
-import Bakery from "./AvailableBakery";
+import Drink from "./AvailableDrinks";
 const Meals = () => {
   const [showCart, setShowCart] = useState(false);
 
@@ -24,7 +24,7 @@ const Meals = () => {
             {showCart && <Cart onHideCart={hideCartHandler} />}
             <Header onShowCart={showCartHandler} />
             <main>
-                <AvailableMeals />
+                <Drink />
             </main>
         </Provider>
     </Fragment>

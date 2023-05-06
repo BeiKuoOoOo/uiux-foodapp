@@ -21,6 +21,11 @@ import AvailableMeals from "../components/Meals/AvailableMeals";
 import Header from "../components/Layout/Header";
 import Cart from "../components/Cart/Cart";
 import Card from "../components/UI/Card";
+import BakeryList from "../components/Meals/AvailableBakery";
+import AvailableBakery from "../components/Login/bakery.component";
+import AvailableDrinks from "../components/Login/drink.component";
+import AvailableFood from "../components/Login/food.component";
+import AvailableSnack from "../components/Login/snack.component";
 
 type Props = {};
 
@@ -106,29 +111,29 @@ class App extends Component<Props, State> {
               </li> */}
               <ul>
                 <li>
-                  <a href="#Menu">
-                    <Link to={"/menu"} className = "nav-button">
-                      Menu
+                  <a href="#AvailableFood">
+                    <Link to={"/food"} className = "nav-button">
+                      Food
                     </Link>
                   </a>
                 </li>
                 <li>
-                  <a href="#Bakery">
-                    <Link to={"/menu"} className = "nav-button">
+                  <a href="#AvailableBakery">
+                    <Link to={"/bakery"} className = "nav-button">
                       Bakery
                     </Link>
                   </a>
                 </li>
                 <li>
-                  <a href="#Drinks">
-                    <Link to={"/menu"} className = "nav-button">
+                  <a href="#AvailableDrinks">
+                    <Link to={"/drink"} className = "nav-button">
                       Drinks
                     </Link>
                   </a>
                 </li>
                 <li>
-                  <a href="#Snacks">
-                    <Link to={"/menu"} className = "nav-button">
+                  <a href="#AvailableSnack">
+                    <Link to={"/snack"} className = "nav-button">
                       Snacks
                     </Link>
                   </a>
@@ -186,6 +191,10 @@ class App extends Component<Props, State> {
             <Route path="/mod" element={<BoardModerator />} />
             <Route path="/admin" element={<BoardAdmin />} />
             <Route path="/menu" element={<Menu />} />
+            <Route path="/bakery" element={<AvailableBakery />} />
+            <Route path="/drink" element={<AvailableDrinks />} />
+            <Route path="/snack" element={<AvailableSnack />} />
+            <Route path="/food" element={<AvailableFood />} />
           </Routes>
         </div>
 

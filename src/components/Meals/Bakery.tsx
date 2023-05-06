@@ -24,7 +24,7 @@ const Meals = () => {
             {showCart && <Cart onHideCart={hideCartHandler} />}
             <Header onShowCart={showCartHandler} />
             <main>
-                <AvailableMeals />
+                <Bakery />
             </main>
         </Provider>
     </Fragment>

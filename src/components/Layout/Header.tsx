@@ -17,7 +17,7 @@ const Header = (props: any) => {
   return (
     <Fragment>
       <Provider store={store}>
-        <header className={classes.header}>
+        <header className={classes.header} style={{paddingRight: '200px',paddingTop :'15px'}}>
 
           {/*<a href="/">*/}
           {/*  <img src="/images/transparentfrankies.png" alt="Home" className={classes.logo} />*/}

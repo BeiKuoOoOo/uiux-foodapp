@@ -29,6 +29,12 @@ class AuthService {
       password
     });
   }
+    order(pickupname: string, card: string) {
+    return ({
+      pickupname,
+      card
+    });
+  }
 
   getCurrentUser() {
     const userStr = localStorage.getItem("user");

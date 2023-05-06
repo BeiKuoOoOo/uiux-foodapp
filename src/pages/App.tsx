@@ -26,6 +26,7 @@ import AvailableBakery from "../components/Login/bakery.component";
 import AvailableDrinks from "../components/Login/drink.component";
 import AvailableFood from "../components/Login/food.component";
 import AvailableSnack from "../components/Login/snack.component";
+import Order from "../components/Login/order.component";
 
 type Props = {};
 
@@ -195,6 +196,7 @@ class App extends Component<Props, State> {
             <Route path="/drink" element={<AvailableDrinks />} />
             <Route path="/snack" element={<AvailableSnack />} />
             <Route path="/food" element={<AvailableFood />} />
+            <Route path="/order" element={<Order />} />
           </Routes>
         </div>
 

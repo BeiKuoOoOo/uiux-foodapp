@@ -4,8 +4,12 @@ import classes from "./Cart.module.scss";
 import IMeal from "../../types/IMeal";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { addMeal, removeMeal, emptyCart } from "../../app/mealSlice";
+import {Link} from "react-router-dom";
+import {useState} from "react";
 
-const Cart = (props: any) => {
+
+const Cart = (props: any) : JSX.Element => {
+
   const dispatch = useAppDispatch();
   const mealState = useAppSelector((state) => state.meals);
   const meals = mealState.meals;
@@ -38,6 +42,14 @@ const Cart = (props: any) => {
       })}
     </ul>
   );
+  const [clickedButton, setClickedButton] = useState('');
+
+  const buttonHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+
+    const button: HTMLButtonElement = event.currentTarget;
+    setClickedButton(button.name);
+  };
 
   return (
     <Modal onClose={props.onHideCart}>
@@ -62,13 +74,27 @@ const Cart = (props: any) => {
           </button>
         )}
         {hasMeals && (
-          <button className={classes.button} onClick={props.onHideCart}>
-            Order
-          </button>
+            <div className="container">
+              <form>
+        <button onClick={buttonHandler} className="button" name="button 1">Order
+        </button>
+      </form>
+      <h3>
+        {clickedButton !== ""
+          ? 'Order Placed!'
+          : ""}
+      </h3>
+                  <Link to={"/order"}>
+                    Order Page
+                  </Link>
+    </div>
+
+
         )}
       </div>
     </Modal>
   );
 };
+
 
 export default Cart;

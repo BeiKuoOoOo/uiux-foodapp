@@ -41,18 +41,18 @@ const AvailableSnack = [
 ];
 
 const SnackList = () => {
-    const snackList = (
-        <ul>
-            {AvailableSnack.map((meal) => (
-                <MealItem key={meal.id} item={meal}/>
-            ))}
-        </ul>
-    );
-    return (
-        <div className={classes.container}>
-            <Card>{snackList}</Card>
-        </div>
-    );
+  const snackList = (
+    <ul>
+      {AvailableSnack.map((meal) => (
+        <MealItem key={meal.id} item={meal} />
+      ))}
+    </ul>
+  );
+  return (
+    <div className={classes.container}>
+      <Card>{snackList}</Card>
+    </div>
+  );
 };
 
 export default SnackList;

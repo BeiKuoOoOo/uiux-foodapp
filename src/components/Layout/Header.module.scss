@@ -28,7 +28,7 @@
   transform: rotateZ(-5deg) translateY(-4rem) translateX(-1rem);
 }
 
-.logo {
+.logo{
   width: 180px;
   height: auto;
 }
@@ -46,7 +46,7 @@ nav {
   }
 }
 
-.button {
+.button{
   font: sans-serif;
   display: inline-block;
   padding: 12px 24px;
@@ -54,7 +54,7 @@ nav {
   color: black;
   border-radius: 4px;
   text-decoration: none;
-  font-weight: bold;
+  font-weight:bold;
   transition: all 0.2s ease-in-out;
   height: 40px;
   width: auto;
@@ -73,7 +73,7 @@ nav {
   color: black;
   border-radius: 4px;
   text-decoration: none;
-  font-weight: bold;
+  font-weight:bold;
   transition: all 0.2s ease-in-out;
   height: 40px;
   width: auto;
@@ -84,16 +84,16 @@ nav {
   color: white;
 }
 
-.profileicon {
-  height: 50px;
-  width: auto;
+.profileicon{
+    height: 50px;
+    width: auto;
 }
 
-.profile-dropdown {
+.profile-dropdown{
   position: relative;
 }
 
-.dropdown-content {
+.dropdown-content{
   position: absolute;
   top: 100%;
   left: 0;

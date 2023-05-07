@@ -1,8 +1,8 @@
-import {configureStore} from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 import mealReducer from "./mealSlice";
 
 export const store = configureStore({
-    reducer: {meals: mealReducer},
+  reducer: { meals: mealReducer },
 });
 
 export type RootState = ReturnType<typeof store.getState>;

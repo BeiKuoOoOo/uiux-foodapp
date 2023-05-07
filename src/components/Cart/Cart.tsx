@@ -9,7 +9,7 @@ import {useState} from "react";
 
 
 const Cart = (props: any): JSX.Element => {
-
+    const [amountIsValid, setAmountIsValid] = useState(true);
     const dispatch = useAppDispatch();
     const mealState = useAppSelector((state) => state.meals);
     const meals = mealState.meals;

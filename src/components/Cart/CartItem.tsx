@@ -1,4 +1,6 @@
 import classes from "./CartItem.module.scss";
+import {Simulate} from "react-dom/test-utils";
+import error = Simulate.error;
 
 const CartItem = (props: any) => {
     const item = props.item;
@@ -10,12 +12,19 @@ const CartItem = (props: any) => {
                 <h2>{item.name}</h2>
                 <div className={classes.summary}>
                     <span className={classes.price}>{price}</span>
-                    <span className={classes.amount}>x {item.amount}</span>
+                    <ul className={classes.amount}> {item.amount > 5 &&
+                        <ul> x {item.amount}
+                            <ul className={classes["warning"]}><strong>Max 5!</strong></ul>
+                        </ul>}
+                        {item.amount <= 5 &&
+                            <ul>x {item.amount}</ul>}</ul>
                 </div>
             </div>
             <div className={classes.actions}>
                 <button onClick={props.onRemove}>−</button>
-                <button onClick={props.onAdd}>+</button>
+                {item.amount < 5 &&
+                    <button onClick={props.onAdd}>+</button>
+                }
             </div>
         </li>
     );

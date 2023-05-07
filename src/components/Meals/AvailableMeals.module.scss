@@ -6,6 +6,7 @@
 @media only screen {
   .container {
     display: flex;
+    justify-content: center;
     flex-direction: row;
     column-gap: 10px;
     padding-top: 10px;
@@ -16,6 +17,14 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+li {
+  margin: 1rem;
+  flex: 1 1 20rem;
 }
 
 @keyframes meals-appear {

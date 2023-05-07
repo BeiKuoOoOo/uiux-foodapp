@@ -59,18 +59,18 @@ const AvailableFood = [
     },
 ];
 const FoodList = () => {
-    const foodList = (
-        <ul>
-            {AvailableFood.map((meal) => (
-                <MealItem key={meal.id} item={meal}/>
-            ))}
-        </ul>
-    );
-    return (
-        <div className={classes.container}>
-            <Card>{foodList}</Card>
-        </div>
-    );
+  const foodList = (
+    <ul>
+      {AvailableFood.map((meal) => (
+        <MealItem key={meal.id} item={meal} />
+      ))}
+    </ul>
+  );
+  return (
+    <div className={classes.container}>
+      <Card>{foodList}</Card>
+    </div>
+  );
 };
 
 export default FoodList;
